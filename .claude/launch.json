@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "deck",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/adriengibaud/dev/presentation/deck", "--", "--port", "3033"],
+      "port": 3033
+    }
+  ]
+}

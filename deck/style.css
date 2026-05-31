@@ -1,0 +1,71 @@
+/* Global look: dark mode with a subtle gradient toward purple */
+
+:root {
+  --accent: #b794f6;        /* soft purple accent */
+  --accent-dim: #9f7aea;
+  --ink: #f5f3fa;           /* near-white body text */
+  --ink-dim: #b8b3c7;       /* muted text */
+}
+
+.slidev-layout {
+  background: linear-gradient(135deg, #0b0a12 0%, #181028 55%, #2e184a 100%);
+  color: var(--ink);
+}
+
+.slidev-layout h1 {
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.slidev-layout h2 {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.slidev-layout p,
+.slidev-layout li {
+  color: var(--ink);
+}
+
+/* muted subtitle helper: use <p class="subtitle"> or the {.subtitle} attr */
+.subtitle {
+  color: var(--accent) !important;
+  opacity: 0.9;
+}
+
+/* bold text becomes a purple highlight — used for emphasis + metric values */
+.slidev-layout strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--ink-dim) !important;
+}
+
+/* generous, readable bullets */
+.slidev-layout ul {
+  line-height: 1.9;
+}
+
+/* code blocks (shiki) sit on a slightly lighter panel */
+.slidev-layout pre {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* inline code — the default theme styles it light-on-light (invisible on our
+   dark bg). Force a readable dark-theme look: accent text on a tinted panel. */
+.slidev-layout :not(pre) > code {
+  background: rgba(183, 148, 246, 0.15) !important;
+  color: var(--accent) !important;
+  padding: 0.1em 0.4em;
+  border-radius: 0.3em;
+  font-weight: 600;
+}
+
+/* Kill the "go to slide" dialog entirely — it pops in on top-right hover and
+   we don't use it. Removes the hover popup and its off-screen peek. */
+#slidev-goto-dialog {
+  display: none !important;
+}
